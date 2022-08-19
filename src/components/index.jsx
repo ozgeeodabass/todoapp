@@ -1,11 +1,28 @@
-import React from 'react'
+import {useState} from 'react'
 
-function index() {
+//components
+import Form from "./Form";
+import List from "./List";
+import Footer from "./Footer";
+
+function Components() {
+  //array state for our data
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
+
+
+  const [hide, setHide] = useState("All");
+
   return (
-    <div>
+    <div className='todoapp'>
+
+      <Form todos={todos} setTodos={setTodos}/>
+      <List todos={todos} setTodos={setTodos} hide={hide}/>
+      <Footer todos={todos} setTodos={setTodos} setHide ={setHide}/>
       
     </div>
   )
 }
 
-export default index
+export default Components;
