@@ -1,9 +1,9 @@
 import {useState} from 'react'
 
 //components
-import Form from "./Form";
-import List from "./List";
-import Footer from "./Footer";
+import Form from "./Form/Form";
+import List from "./List/List";
+import Footer from "./Footer/Footer";
 
 function Components() {
   //array state for our data
@@ -18,8 +18,8 @@ function Components() {
     <div className='todoapp'>
 
       <Form todos={todos} setTodos={setTodos}/>
-      <List todos={todos} setTodos={setTodos} hide={hide}/>
-      <Footer todos={todos} setTodos={setTodos} setHide ={setHide}/>
+      {/* <List todos={todos} setTodos={setTodos} hide={hide}/>
+      <Footer todos={todos} setTodos={setTodos} setHide ={setHide}/> */}
       
     </div>
   )
