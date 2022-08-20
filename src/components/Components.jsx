@@ -18,8 +18,8 @@ function Components() {
     <div className='todoapp'>
 
       <Form todos={todos} setTodos={setTodos}/>
-      {/* <List todos={todos} setTodos={setTodos} hide={hide}/>
-      <Footer todos={todos} setTodos={setTodos} setHide ={setHide}/> */}
+      <List todos={todos} setTodos={setTodos} hide={hide}/>
+      <Footer todos={todos} setTodos={setTodos} setHide ={setHide}/>
       
     </div>
   )
